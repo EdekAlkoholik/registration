@@ -1,0 +1,18 @@
+echo time()."</br>"; 														// zwróci liczbę sec od 01.01.1970
+		echo mktime(19, 37, 0, 4, 2, 2010)."</br>";		// czas od podanego momentu
+		echo microtime()."</br>";										// mikrosekundy
+		
+		echo date('Y-m-d')."<br>";										// argumenty możemy dowolnie formatować											
+		echo date('d.m.y H:i:s')."<br>";			
+
+		$dataczas = new DateTime(); 									// pusty konstruktor zrobi aktualny czas
+		
+		echo $dataczas->format('d.m.y H:i:s')."<br>";			// formatujemy jak chcemy pokazywać czas
+		echo print_r($dataczas);											// funkcja print_r zwraca zawartość obiektu/tablicy
+		
+		$dzien = 26;
+		$miesiac = 7;
+		$rok = 1875;
+		
+		if(checkdate($miesiac, $dzien, $rok)) echo "<br> Poprawna data!";		// sprawdza poprawność daty, kolejność amerykańska
+		else echo "<br>Niepoprawna data!";
